@@ -1,86 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Banco Imobiliário</title>
-    <link rel="stylesheet" href="estilo.css">
-</head>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
 
-<body>
-        <h1>Contador</h1>
-        <h2>Banco Imobiliário💵</h2>
-    
+  <body>
+    <h1>Contador</h1>
+    <h2>Banco Imobiliário💵</h2>
+
     <p id="resultado"></p>
     <div id="mais">
-
-    <button id="mil" onclick="add(1000)">+$1.000😊</button>
-    <button id="cincomil" onclick="add(5000)">+$5.000😀</button>
-    <button id="dezmil" onclick="add(10000)">+$10.000😄</button>
-    <button id="cinquenta" onclick="add(50000)">+$50.000😁</button>
-    <button id="cem" onclick="add(100000)">+$100.000🙅</button>
-    <button id="duzentos" onclick="add(200000)">+$200.000😎</button>
-    <button id="quinhentos" onclick="add(500000)">+$500.000😎🙅</button>
-</div>
+      <button id="mil" onclick="add(1000)">+$1.000😊</button>
+      <button id="cincomil" onclick="add(5000)">+$5.000😀</button>
+      <button id="dezmil" onclick="add(10000)">+$10.000😄</button>
+      <button id="cinquenta" onclick="add(50000)">+$50.000😁</button>
+      <button id="cem" onclick="add(100000)">+$100.000🙅</button>
+      <button id="duzentos" onclick="add(200000)">+$200.000😎</button>
+      <button id="quinhentos" onclick="add(500000)">+$500.000😎🙅</button>
+    </div>
 
     <button id="Reset" onclick="Reset()">⚠️Reset⚠️</button>
 
     <div id="menos">
-    <button id="menosmil" onclick="add(-1000)">-$1.000😭</button>
-    <button id="menoscincomil" onclick="add(-5000)">-$5.000😭</button>
-    <button id="menosdezmil" onclick="add(-10000)">-$10.000😭</button>
-    <button id="menoscinquenta" onclick="add(-50000)">-$50.000😭</button>
-    <button id="menoscem" onclick="add(-100000)">-$100.000😭</button>
-    <button id="menosduzentos" onclick="add(-200000)">-$200.000😭</button>
-    <button id="menosquinhentos" onclick="add(-500000)">-$500.000😭</button>
-</div>
+      <button id="menosmil" onclick="add(-1000)">-$1.000😭</button>
+      <button id="menoscincomil" onclick="add(-5000)">-$5.000😭</button>
+      <button id="menosdezmil" onclick="add(-10000)">-$10.000😭</button>
+      <button id="menoscinquenta" onclick="add(-50000)">-$50.000😭</button>
+      <button id="menoscem" onclick="add(-100000)">-$100.000😭</button>
+      <button id="menosduzentos" onclick="add(-200000)">-$200.000😭</button>
+      <button id="menosquinhentos" onclick="add(-500000)">-$500.000😭</button>
+    </div>
 
-<script>
-    const numerosalvo = localStorage.getItem("numero")
-    let numero = 0
+    <script>
+      const numerosalvo = localStorage.getItem("numero");
+      let numero = 0;
 
-    if (numerosalvo) {
+      if (numerosalvo) {
         // Remove os pontos e converte pra número
-        numero = parseInt(numerosalvo)
-    }
+        numero = parseInt(numerosalvo);
+      }
 
-    function add(value) {
-        numero += value
-        render()
-    }
+      function add(value) {
+        numero += value;
+        render();
+      }
 
-    function render() {
-    const p = document.querySelector("#resultado")
-    p.innerText = numero.toLocaleString('pt-BR')
+      function render() {
+        const p = document.querySelector("#resultado");
+        p.innerText = numero.toLocaleString("pt-BR");
 
-    // Remove qualquer classe anterior
-    p.classList.remove("positivo", "negativo", "neutro")
+        // Remove qualquer classe anterior
+        p.classList.remove("positivo", "negativo", "neutro");
 
-    // Adiciona a nova classe dependendo do valor
-    if (numero > 0) {
-        p.classList.add("positivo")
-    } else if (numero < 0) {
-        p.classList.add("negativo")
-    } else {
-        p.classList.add("neutro")
-    }
+        // Adiciona a nova classe dependendo do valor
+        if (numero > 0) {
+          p.classList.add("positivo");
+        } else if (numero < 0) {
+          p.classList.add("negativo");
+        } else {
+          p.classList.add("neutro");
+        }
 
-    localStorage.setItem("numero", numero)
-}
+        localStorage.setItem("numero", numero);
+      }
 
+      function Reset() {
+        numero = 0;
+        render();
+      }
 
-    function Reset() {
-        numero = 0
-        render()
-    }
+      render();
+    </script>
 
-    render()
-</script>
-
-<div id="ass">
-<h3>Feito por: Igor Dias</h3>
-<h4>com a ajuda de: Diogo, João Pedro e ChatGPT</h4>
-</div>
-</body>
-
+    <div id="ass">
+      <h3>Feito por: Igor Dias</h3>
+      <h4>com a ajuda de: Diogo, João Pedro e ChatGPT</h4>
+    </div>
+  </body>
 </html>

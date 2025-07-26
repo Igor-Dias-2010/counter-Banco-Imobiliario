@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   display: grid;
   height: 100vh;
@@ -9,161 +10,38 @@ body {
   place-items: center;
   background-size: cover;
   background-position: center;
-  background-image: url(Banco\ imobiliário-fotor-2025042218201.jpg);
+  background-image: url(Banco-imobiliário.jpg);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
 p {
   font-size: 120px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: rgb(46, 204, 113);
 }
+
 h1 {
   color: lightgray;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 70px;
 }
+
 h2 {
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 70px;
 }
+
 h3 {
   color: white;
 }
+
 h4 {
   color: lightgray;
 }
-#ass {
-  place-items: center;
-  background-color: black;
-  font-size: 13px;
-}
-@media (max-width: 768px) {
-  #mil,
-  #cincomil,
-  #dezmil,
-  #cinquenta,
-  #cem,
-  #duzentos,
-  #quinhentos,
-  #menosmil,
-  #menoscincomil,
-  #menosdezmil,
-  #menoscinquenta,
-  #menoscem,
-  #menosduzentos,
-  #menosquinhentos {
-    background: rgb(124, 154, 119);
-    border: 5px solid rgb(124, 154, 119);
-    border-radius: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-size: 23px;
-    color: rgb(8, 8, 8);
-    transition: all 0.3s ease;
-  }
-  #mil:hover,
-  #cincomil:hover,
-  #dezmil:hover,
-  #cinquenta:hover,
-  #cem:hover,
-  #duzentos:hover,
-  #quinhentos:hover,
-  #menosmil:hover,
-  #menoscincomil:hover,
-  #menosdezmil:hover,
-  #menoscem:hover,
-  #menosquinhentos:hover,
-  #menosduzentos:hover,
-  #menoscinquenta:hover {
-    background-color: rgb(97, 128, 91);
-    transform: scale(1.1);
-    cursor: pointer;
-    color: white;
-  }
-}
 
-button {
-  margin-top: 20px;
-  padding: 10px;
-  margin: 5px;
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-#Reset {
-  background: red;
-  border: 5px solid red;
-  border-radius: 10px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 30px;
-  margin-top: 1px;
-  margin-bottom: 6px;
-  transition: all 0.3s ease;
-}
-#Reset:hover {
-  background-color: darkred;
-  transform: scale(1.1);
-  cursor: pointer;
-  color: yellow;
-}
-#mil,
-#cincomil,
-#dezmil,
-#cinquenta,
-#cem,
-#duzentos,
-#quinhentos,
-#menosmil,
-#menoscincomil,
-#menosdezmil,
-#menoscinquenta,
-#menoscem,
-#menosduzentos,
-#menosquinhentos {
-  background: rgb(124, 154, 119);
-  border: 5px solid rgb(124, 154, 119);
-  border-radius: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 23px;
-  color: rgb(8, 8, 8);
-  transition: all 0.3s ease;
-}
-#mil:hover,
-#cincomil:hover,
-#dezmil:hover,
-#cinquenta:hover,
-#cem:hover,
-#duzentos:hover,
-#quinhentos:hover,
-#menosmil:hover,
-#menoscincomil:hover,
-#menosdezmil:hover,
-#menoscem:hover,
-#menosquinhentos:hover,
-#menosduzentos:hover,
-#menoscinquenta:hover {
-  background-color: rgb(97, 128, 91);
-  transform: scale(1.1);
-  cursor: pointer;
-  color: white;
-}
-#resultado {
-  font-size: 120px;
-  font-weight: bold;
-  transition: color 0.5s ease;
-}
-
-.positivo {
-  color: rgb(30, 172, 89);
-}
-
-.negativo {
-  color: rgb(230, 44, 44);
-}
-
-.neutro {
-  color: rgb(92, 161, 161);
-}
-
-@media (max-width: 768px) {
+@media (max-width: 412px) {
   body {
     padding: 20px;
     display: flex;
@@ -186,11 +64,11 @@ button {
   }
 
   button {
-    width: 90%;
+    width: 80%;
     max-width: 300px;
-    font-size: 18px;
-    padding: 12px;
+    font-size: 1.5rem;
   }
+
 
   #mais,
   #menos {
@@ -205,10 +83,106 @@ button {
     font-size: 24px;
   }
 
-  #ass {
-    width: 100%;
-    text-align: center;
-    font-size: 12px;
-    margin-top: 20px;
+  .menos {
+    background: rgb(124, 154, 119);
+    border: 5px solid rgb(124, 154, 119);
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 23px;
+    color: rgb(8, 8, 8);
+    transition: all 0.3s ease;
   }
+
+  .menos:hover {
+    background-color: rgb(97, 128, 91);
+    transform: scale(1.1);
+    cursor: pointer;
+    color: white;
+  }
+
+  .mais {
+    background: rgb(124, 154, 119);
+    border: 5px solid rgb(124, 154, 119);
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 23px;
+    color: rgb(8, 8, 8);
+    transition: all 0.3s ease;
+  }
+
+  .mais:hover {
+    background-color: rgb(97, 128, 91);
+    transform: scale(1.1);
+    cursor: pointer;
+    color: white;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------- */
+.mais,
+.menos {
+  background: rgb(124, 154, 119);
+  border: 5px solid rgb(124, 154, 119);
+  border-radius: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 23px;
+  color: rgb(8, 8, 8);
+  transition: all 0.3s ease;
+}
+
+.mais:hover,
+.menos:hover {
+  background-color: rgb(97, 128, 91);
+  transform: scale(1.1);
+  cursor: pointer;
+  color: white;
+}
+
+
+button {
+  margin: 5px;
+  font-size: 20px;
+  width: 150px;
+  height: 90px;
+}
+
+#Reset {
+  background: red;
+  border: 5px solid red;
+  border-radius: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 30px;
+  margin-top: 1px;
+  margin-bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+#Reset:hover {
+  background-color: darkred;
+  transform: scale(1.1);
+  cursor: pointer;
+  color: yellow;
+}
+
+#resultado {
+  font-size: 120px;
+  font-weight: bold;
+  transition: color 0.5s ease;
+}
+
+.positivo {
+  color: rgb(30, 172, 89);
+}
+
+.negativo {
+  color: rgb(230, 44, 44);
+}
+
+.neutro {
+  color: rgb(92, 161, 161);
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
 }

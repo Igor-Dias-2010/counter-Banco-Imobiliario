@@ -41,7 +41,7 @@ h4 {
   color: lightgray;
 }
 
-@media (max-width: 412px) {
+@media (min-width: 412px) {
   body {
     padding: 20px;
     display: flex;
